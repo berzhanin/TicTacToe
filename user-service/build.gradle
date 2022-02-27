@@ -1,0 +1,11 @@
+dependencies {
+  implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+}
+
+bootJar {
+	enabled = true
+}
+
+bootBuildImage{ 
+  imageName='tictactoe/'+rootProject.name+'-'+project.name
+}

@@ -1,0 +1,30 @@
+spring-multi-module-service
+|   build.gradle
+|
++---user-service
+|   |   build.gradle
+|   +---src
+|   |   +---main
+|   |   |   +---java
+|   |   |   |   \---com
+|   |   |   |       \---games
+|   |   |   |           \---user
+|   |   |   |               \---service
+|   |   |   |                   |   GreetingController.java
+|   |   |   |                   |   UserServiceApplication.java
+|   |   |   |                   |   
+|   |   |   |                   +---client
+|   |   |   |                   |       BattleServiceClient.java
+|   |   |   |                   |       StatisticServiceClient.java
+|   |   |   |                   |       
+|   |   |   |                   +---config
+|   |   |   |                   \---model
+|   |   |   |                           Greeting.java
+|   |   |   |                           
+|   |   |   \---resources
+|   |   |           application.yaml
+|   |   |           
+|   |   \---test
++---battle-service
++---statistic-service
+                            

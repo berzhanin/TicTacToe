@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: "dev"
+
+---
+
+spring:
+  profiles: dev
+server:
+  port : 8081
+
+battle.service:
+  url: http://localhost:8082
+
+statistic.service:
+  url: http://localhost:8083
+
+---
+
+spring:
+  profiles: prod
+server:
+  port : 8080
