@@ -1,0 +1,5 @@
+com/games/statistic/service/GreetingController.java
+ com.games.statistic.service.Greeting
+ com.games.statistic.service.GreetingController
+com/games/statistic/service/StatisticServiceApplication.java
+ com.games.statistic.service.StatisticServiceApplication
