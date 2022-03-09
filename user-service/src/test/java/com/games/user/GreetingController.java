@@ -1,10 +1,10 @@
-package com.games.user.service;
+package com.games.user;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.games.user.service.client.BattleServiceClient;
-import com.games.user.service.client.StatisticServiceClient;
-import com.games.user.service.model.Greeting;
+import com.games.user.client.BattleServiceClient;
+import com.games.user.client.StatisticServiceClient;
+import com.games.user.model.Greeting;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

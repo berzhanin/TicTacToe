@@ -1,4 +1,4 @@
-package com.games.statistic.service;
+package com.games.battle;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-	private static final String template = "Statistic-Service - Hello, %s!";
+	private static final String template = "Battle-Service - Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/greeting")

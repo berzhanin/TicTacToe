@@ -1,6 +1,6 @@
-package com.games.user.service.client;
+package com.games.user.client;
 
-import com.games.user.service.model.Greeting;
+import com.games.user.model.Greeting;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
