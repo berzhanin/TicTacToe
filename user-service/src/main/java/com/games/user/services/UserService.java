@@ -9,8 +9,10 @@ import java.util.UUID;
 public interface UserService {
 
     List<User> listAllUsers();
-    UserDto findUserById(Long id);
+    UserDto findUserById(UUID id);
     UserDto findUserByEmail(String email);
     void updateUserById(UUID userId, UserDto userDto);
     void deleteUserById(UUID userId);
+
+    UserDto saveUser(UserDto userDto);
 }
