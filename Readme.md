@@ -40,7 +40,7 @@ Mono repo
 3. создание сервиса user-service
    Разработка моделей/интерфейсов
    REST-API
-   4 Создание сервиса battle-service
+4. Создание сервиса battle-service
    Разработка моделей/интерфейсов
    REST-API
 5. Создание Сервиса statistic-service
