@@ -4,33 +4,36 @@ import com.games.battle.domain.Game;
 import com.games.battle.model.GameDto;
 import com.games.battle.services.GameService;
 import com.games.user.domain.User;
-import com.games.user.services.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/game")
+@RequiredArgsConstructor
 public class GameController {
 
     GameService gameService;
 
-    UserService userService;
-
-    HttpSession httpSession;
-
     @PostMapping
     @RequestMapping(value = "/create")
-    public Game createGame(@RequestBody GameDto gameDto){
+    public ResponseEntity<Game> createGame(@RequestBody User user, GameDto gameDto) {
 
-        //todo: change new User() to userService.getUserById()
-        Game game = gameService.createGame(new User(), gameDto);
-        httpSession.setAttribute("gameId", game.getId());
+        Game newGame = gameService.createGame(user, gameDto);
 
-        return game;
+        return ResponseEntity.ok(newGame);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Game>> finAllGames() {
+        return ResponseEntity.ok(gameService.listAllGames());
+    }
+    @GetMapping("/{gameId}")
+    public ResponseEntity<Optional<Game>> findGameById(@PathVariable Long gameId) {
+        return ResponseEntity.ok(gameService.findGameById(gameId));
     }
 
     @PostMapping
